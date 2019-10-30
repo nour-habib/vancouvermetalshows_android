@@ -1,0 +1,44 @@
+{
+  "shows": [
+    {
+      "id": "1",
+      "artist": "Opeth",
+      "date": "2019-02-15",
+      "venue": "Orpheum",
+      "supporting_artists": "Katatonia",
+      "tickets": "$50"
+    },
+    {
+      "id": "2",
+      "artist": "Amorphis",
+      "date": "2019-10-01",
+      "venue": "Venue Nightclub",
+      "supporting_artists": "",
+      "tickets": "$40"
+    },
+    {
+      "id": "3",
+      "artist": "Iron Maiden",
+      "date": "2019-09-03",
+      "venue": "Rogers Arena",
+      "supporting_artists": "",
+      "tickets": "$75"
+    },
+    {
+      "id": "4",
+      "artist": "Megadeth",
+      "date": "2019-09-011",
+      "venue": "Rogers Arena",
+      "supporting_artists": "",
+      "tickets": "$90"
+    },
+    {
+      "id": "5",
+      "artist": "Kataklysm",
+      "date": "2019-08-21",
+      "venue": "Rickshaw Theatre",
+      "supporting_artists": "",
+      "tickets": "$40"
+    }
+  ]
+}

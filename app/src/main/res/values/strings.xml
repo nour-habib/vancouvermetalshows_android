@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">VancouverMetalShows</string>
+    <string name="title_activity_shows_detail">ShowsDetailActivity</string>
+    <string name="main_activity">MainActivity</string>
+    <string name="title_activity_favourites">FavouritesActivity</string>
+</resources>
