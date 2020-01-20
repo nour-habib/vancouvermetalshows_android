@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "272584559682",
+    "firebase_url": "https://vancouver-metal-shows.firebaseio.com",
+    "project_id": "vancouver-metal-shows",
+    "storage_bucket": "vancouver-metal-shows.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:272584559682:android:fc5686931f9305a35c71db",
+        "android_client_info": {
+          "package_name": "com.vms.android.vancouvermetalshows"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "272584559682-9i7488drmdr40p7umo5tt7ljstfsglcm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl08_e63sbj1sYf5xHvddsLH0wYsHAOH8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "272584559682-9i7488drmdr40p7umo5tt7ljstfsglcm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

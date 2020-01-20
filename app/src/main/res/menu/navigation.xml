@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
 
     <item
         android:id="@+id/home"
         android:enabled="true"
-        android:title="Home"/>
+        android:title="Home"
+        android:icon="@drawable/home"
+        />
 
     <item
         android:id="@+id/shows"
         android:enabled="true"
-        android:title="Shows"/>
+        android:title="Shows"
+        android:icon="@drawable/music"/>
 
     <item
         android:id="@+id/favs"
         android:enabled="true"
-        android:title="My Shows"/>
+        android:title="My Shows"
+        android:icon="@drawable/fav"/>
 
 
 

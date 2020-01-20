@@ -1,19 +1,20 @@
 package com.vms.android.vancouvermetalshows;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.lang.reflect.Array;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 
 public class ShowsRecyclerViewAdapter extends RecyclerView.Adapter<ShowsRecyclerViewAdapter.ViewHolder>{
@@ -21,6 +22,7 @@ public class ShowsRecyclerViewAdapter extends RecyclerView.Adapter<ShowsRecycler
     private ArrayList<Shows> mShowsArrayList;
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
+
 
 
     // data is passed into the constructor
@@ -42,26 +44,24 @@ public class ShowsRecyclerViewAdapter extends RecyclerView.Adapter<ShowsRecycler
     public void onBindViewHolder(ViewHolder holder, int position) {
         Shows show = mShowsArrayList.get(position);
         holder.artistTextView.setText(show.getArtist());
+        holder.imgView.setImageResource(show.getImgResourceId());
+
 
         String date = show.getDate();
-        SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
-        SimpleDateFormat newFormat = new SimpleDateFormat("EEEE, MMM d, yyyy");
-        String newDateStr = "";
-        Date newDate = null;
-        try{
-            newDate = dt.parse(date);
-        } catch (ParseException e){
-            e.printStackTrace();
-        }
-        if(newDate!= null){
-            newDateStr = newFormat.format(newDate);
-        }
+        //ShowsFragment showsFragment = new ShowsFragment();
+        //String newDateStr = showsFragment.convertDate(date);
+
+        String newDateStr = show.convertDate(date);
 
         Log.d("ShowDate: ", (newDateStr));
 
 
         holder.dateTextView.setText(newDateStr);
         holder.venueTextView.setText(show.getVenue());
+
+
+
+
     }
 
     // total number of rows
@@ -78,6 +78,7 @@ public class ShowsRecyclerViewAdapter extends RecyclerView.Adapter<ShowsRecycler
         TextView artistTextView;
         TextView dateTextView;
         TextView venueTextView;
+        ImageView imgView;
 
 
         ViewHolder(View itemView) {
@@ -85,6 +86,8 @@ public class ShowsRecyclerViewAdapter extends RecyclerView.Adapter<ShowsRecycler
             artistTextView = itemView.findViewById(R.id.artist);
             dateTextView = itemView.findViewById(R.id.date);
             venueTextView = itemView.findViewById(R.id.venue);
+            imgView = itemView.findViewById(R.id.artist_image);
+
             itemView.setOnClickListener(this);
         }
 
@@ -107,6 +110,13 @@ public class ShowsRecyclerViewAdapter extends RecyclerView.Adapter<ShowsRecycler
     // parent activity will implement this method to respond to click events
     public interface ItemClickListener {
         void onItemClick(View view, int position);
+    }
+
+    public void updateList(ArrayList<Shows> newShowsArrayList)
+    {
+        mShowsArrayList = new ArrayList<>();
+        mShowsArrayList.addAll(newShowsArrayList);
+        notifyDataSetChanged();
     }
 
 

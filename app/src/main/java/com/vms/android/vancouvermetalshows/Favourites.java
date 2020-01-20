@@ -1,6 +1,11 @@
 package com.vms.android.vancouvermetalshows;
 
+import androidx.annotation.NonNull;
+
+
 public class Favourites {
+    @NonNull
+
 
     private Shows mShows;
 

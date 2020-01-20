@@ -3,4 +3,10 @@
     <string name="title_activity_shows_detail">ShowsDetailActivity</string>
     <string name="main_activity">MainActivity</string>
     <string name="title_activity_favourites">FavouritesActivity</string>
+    <string name="lineup_string">Lineup:</string>
+    <string name="interested_string">Interested</string>
+    <string name="share_string">Share</string>
+    <string name="getTix_string">Get Tickets</string>
+    <string name="listView_title">My Shows</string>
+    <string name="query_hint">Search for shows</string>
 </resources>

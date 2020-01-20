@@ -1,10 +1,9 @@
 package com.vms.android.vancouvermetalshows;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.util.Log;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,15 +17,12 @@ public class ShowDetailsFragment extends Fragment {
     TextView mVenueTextView;
     TextView mDateTextView;
     TextView mSuppArtistTextView;
+    TextView mLineUpTextView;
     Shows show;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        //just change the fragment_dashboard
-        //with the fragment you want to inflate
-        //like if the class is HomeFragment it should have R.layout.home_fragment
-        //if it is DashboardFragment it should have R.layout.fragment_dashboard
 
         View showDetailsView = inflater.inflate(R.layout.fragment_show_details, container, false);
 
@@ -38,18 +34,27 @@ public class ShowDetailsFragment extends Fragment {
             //Log.d("ShowDetail: ", extras.getString("showDetails"));
         }
 
+        mLineUpTextView = showDetailsView.findViewById(R.id.lineup);
+        mLineUpTextView.setText(R.string.lineup_string);
 
         mArtistTextView =  showDetailsView.findViewById(R.id.artist);
-        mArtistTextView.setText(show.getArtist());
+        mArtistTextView.setText(show.getArtist().toUpperCase());
 
-        mVenueTextView = showDetailsView.findViewById(R.id.venue);
-        mVenueTextView.setText(show.getVenue());
+        mSuppArtistTextView = showDetailsView.findViewById(R.id.supp_artist);
+        mSuppArtistTextView.setText(show.getSupporting_artists());
+
 
         mDateTextView = showDetailsView.findViewById(R.id.date);
         mDateTextView.setText(show.getDate());
 
-        mSuppArtistTextView = showDetailsView.findViewById(R.id.supp_artist);
-        mSuppArtistTextView.setText(show.getSupporting_artists());
+
+        ShowsFragment showsFragment = new ShowsFragment();
+        mVenueTextView = showDetailsView.findViewById(R.id.venue);
+        mVenueTextView.setText(showsFragment.convertDate(show.getVenue()));
+
+
+
+
 
 
         return showDetailsView;

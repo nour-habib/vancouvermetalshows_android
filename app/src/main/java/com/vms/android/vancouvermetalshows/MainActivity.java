@@ -1,17 +1,20 @@
 package com.vms.android.vancouvermetalshows;
 
-import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +23,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //getSupportActionBar().hide();
+
+        getSupportActionBar().setTitle(" ");
+
+        if(savedInstanceState==null)
+        {
+            Fragment fragment = new HomeFragment();
+            loadFragment(fragment);
+        }
 
 
         BottomNavigationView bottomNavigationView =  findViewById(R.id.bottomNavigation);
@@ -29,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 Fragment fragment = null;
                 switch (item.getItemId()) {
                     case R.id.home:
+                        fragment = new HomeFragment();
                         break;
                     case R.id.shows:
                         fragment = new ShowsFragment();
@@ -59,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         }
         return false;
     }
+
 
 
 
