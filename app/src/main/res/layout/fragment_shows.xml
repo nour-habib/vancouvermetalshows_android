@@ -10,7 +10,7 @@
         android:id="@+id/searchview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:queryHint="Search for shows"
+        app:queryHint="@string/query_hint"
         app:iconifiedByDefault="false"
         app:queryBackground="@android:color/transparent">
 

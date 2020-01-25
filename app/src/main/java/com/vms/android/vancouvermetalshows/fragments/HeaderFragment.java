@@ -1,16 +1,18 @@
-package com.vms.android.vancouvermetalshows;
+package com.vms.android.vancouvermetalshows.fragments;
 
-import android.media.Image;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.vms.android.vancouvermetalshows.R;
+import com.vms.android.vancouvermetalshows.adapters.ShowsRecyclerViewAdapter;
+import com.vms.android.vancouvermetalshows.classes.Shows;
 
 public class HeaderFragment extends Fragment {
 
@@ -42,7 +44,7 @@ public class HeaderFragment extends Fragment {
         //Log.d("ShowVenue: ", mShows.getVenue());
 
         mDateTextView = headerView.findViewById(R.id.date_text);
-        ShowsFragment showsFragment = new ShowsFragment();
+        ShowsRecyclerViewAdapter.ShowsFragment showsFragment = new ShowsRecyclerViewAdapter.ShowsFragment();
         mDateTextView.setText(showsFragment.convertDate(mShows.getVenue()));
 
 

@@ -1,6 +1,8 @@
-package com.vms.android.vancouvermetalshows;
+package com.vms.android.vancouvermetalshows.activities;
 
 import android.os.Bundle;
+
+import com.vms.android.vancouvermetalshows.R;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;

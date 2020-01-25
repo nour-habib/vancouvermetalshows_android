@@ -1,4 +1,4 @@
-package com.vms.android.vancouvermetalshows;
+package com.vms.android.vancouvermetalshows.adapters;
 
 import android.content.Context;
 import androidx.annotation.NonNull;
@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import com.vms.android.vancouvermetalshows.R;
+import com.vms.android.vancouvermetalshows.classes.Shows;
 
 import java.util.ArrayList;
 
@@ -59,7 +62,7 @@ public class FavouritesListAdapter extends ArrayAdapter<Shows> {
        mImageButton = convertView.findViewById(R.id.delete_button);
        mImageButton.setVisibility(View.INVISIBLE);
 
-       ShowsFragment showsFragment = new ShowsFragment();
+       ShowsRecyclerViewAdapter.ShowsFragment showsFragment = new ShowsRecyclerViewAdapter.ShowsFragment();
         artistTextView.setText(artist);
         venueTextView.setText(showsFragment.convertDate(venue));
         dateTextView.setText(date);

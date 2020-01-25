@@ -1,19 +1,16 @@
-package com.vms.android.vancouvermetalshows;
+package com.vms.android.vancouvermetalshows.activities;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
-import android.transition.Fade;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
+
+import com.vms.android.vancouvermetalshows.R;
+import com.vms.android.vancouvermetalshows.activities.MainActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -32,7 +29,7 @@ public class SplashActivity extends AppCompatActivity {
         mVMSImageView = findViewById(R.id.vms_logo);
         mVMSImageView.animate().alpha(1f).setDuration(9000);
 
-        final Intent intent = new Intent(this,MainActivity.class);
+        final Intent intent = new Intent(this, MainActivity.class);
 
 
         mVMSImageView.setOnClickListener(new View.OnClickListener() {

@@ -1,4 +1,5 @@
-package com.vms.android.vancouvermetalshows;
+package com.vms.android.vancouvermetalshows.classes;
+
 
 import java.util.Comparator;
 

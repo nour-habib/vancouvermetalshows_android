@@ -32,7 +32,7 @@
 
 
 
-        <activity android:name=".SplashActivity">
+        <activity android:name=".activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -40,21 +40,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:label="@string/main_activity"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name=".ShowsDetailActivity"
+            android:name=".activities.ShowsDetailActivity"
             android:label="@string/title_activity_shows_detail"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".activities.MainActivity"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.vms.android.vancouvermetalshows.MainActivity" />
+                android:value="com.vms.android.vancouvermetalshows.activities.MainActivity" />
         </activity>
         <activity
-            android:name=".FavouritesActivity"
+            android:name=".activities.FavouritesActivity"
             android:label="@string/title_activity_favourites"
             android:theme="@style/AppTheme"></activity>
     </application>

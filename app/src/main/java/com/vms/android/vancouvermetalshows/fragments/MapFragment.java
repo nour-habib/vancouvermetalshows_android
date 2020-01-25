@@ -1,4 +1,4 @@
-package com.vms.android.vancouvermetalshows;
+package com.vms.android.vancouvermetalshows.fragments;
 
 import android.Manifest;
 import android.app.Dialog;
@@ -32,6 +32,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.vms.android.vancouvermetalshows.R;
 
 import org.w3c.dom.Text;
 

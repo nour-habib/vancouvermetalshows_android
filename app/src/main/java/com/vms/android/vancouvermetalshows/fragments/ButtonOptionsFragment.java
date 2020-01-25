@@ -1,6 +1,5 @@
-package com.vms.android.vancouvermetalshows;
+package com.vms.android.vancouvermetalshows.fragments;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.net.Uri;
@@ -20,19 +19,12 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-
-
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.vms.android.vancouvermetalshows.R;
+import com.vms.android.vancouvermetalshows.classes.Shows;
 
 import java.io.File;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.sql.DatabaseMetaData;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -60,8 +52,6 @@ public class ButtonOptionsFragment extends Fragment {
 
         View buttonOptionsView = inflater.inflate(R.layout.button_options_fragment, container, false);
 
-       // FirebaseFirestore db = FirebaseFirestore.getInstance();
-
 
         Bundle extras = getActivity().getIntent().getExtras();
         if(extras != null)
@@ -83,7 +73,7 @@ public class ButtonOptionsFragment extends Fragment {
 
 
         mInterestedButton = buttonOptionsView.findViewById(R.id.interested_button);
-        mInterestedButton.setText("Interested");
+        mInterestedButton.setText(R.string.interested_string);
         mInterestedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -105,7 +95,7 @@ public class ButtonOptionsFragment extends Fragment {
         });
 
         mShareButton =  buttonOptionsView.findViewById(R.id.share_button);
-        mShareButton.setText("Share");
+        mShareButton.setText(R.string.share_string);
         mShareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -120,7 +110,7 @@ public class ButtonOptionsFragment extends Fragment {
         });
 
         Button mGetTixButton = buttonOptionsView.findViewById(R.id.get_tickets_button);
-        mGetTixButton.setText("Get Tickets");
+        mGetTixButton.setText(R.string.getTix_string);
         mGetTixButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

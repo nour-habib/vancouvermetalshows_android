@@ -1,20 +1,17 @@
-package com.vms.android.vancouvermetalshows;
+package com.vms.android.vancouvermetalshows.activities;
 
 import androidx.annotation.NonNull;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.vms.android.vancouvermetalshows.adapters.ShowsRecyclerViewAdapter;
+import com.vms.android.vancouvermetalshows.fragments.FavouritesFragment;
+import com.vms.android.vancouvermetalshows.fragments.HomeFragment;
+import com.vms.android.vancouvermetalshows.R;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.fragment.app.Fragment;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                         fragment = new HomeFragment();
                         break;
                     case R.id.shows:
-                        fragment = new ShowsFragment();
+                        fragment = new ShowsRecyclerViewAdapter.ShowsFragment();
                         break;
                     case R.id.favs:
                         fragment = new FavouritesFragment();

@@ -1,6 +1,6 @@
-package com.vms.android.vancouvermetalshows;
+package com.vms.android.vancouvermetalshows.fragments;
 
-import android.app.usage.UsageEvents;
+
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -11,8 +11,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -21,53 +19,30 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
 import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.events.Event;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.google.firebase.firestore.auth.User;
+import com.vms.android.vancouvermetalshows.adapters.FavouritesListAdapter;
+import com.vms.android.vancouvermetalshows.R;
+import com.vms.android.vancouvermetalshows.classes.ShowComparator;
+import com.vms.android.vancouvermetalshows.classes.Shows;
 
-
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 import static android.widget.Toast.LENGTH_SHORT;
-import static com.vms.android.vancouvermetalshows.ButtonOptionsFragment.ARTIST_KEY;
-import static com.vms.android.vancouvermetalshows.ButtonOptionsFragment.DATE_KEY;
-import static com.vms.android.vancouvermetalshows.ButtonOptionsFragment.SUP_ART_KEY;
-import static com.vms.android.vancouvermetalshows.ButtonOptionsFragment.TICKETS_KEY;
-import static com.vms.android.vancouvermetalshows.ButtonOptionsFragment.VENUE_KEY;
 
 public class FavouritesFragment extends Fragment{
 

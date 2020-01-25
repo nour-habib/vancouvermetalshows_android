@@ -9,4 +9,9 @@
     <string name="getTix_string">Get Tickets</string>
     <string name="listView_title">My Shows</string>
     <string name="query_hint">Search for shows</string>
+    <string name="artist_string">Artist</string>
+    <string name="supp_artist_string">Supporting artists</string>
+    <string name="venue_string">Venue</string>
+    <string name="delete_string">Delete show.</string>
+    <string name="ticketmaster_string">http://www.ticketmaster.ca</string>
 </resources>

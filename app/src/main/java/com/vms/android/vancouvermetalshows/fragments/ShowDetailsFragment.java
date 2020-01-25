@@ -1,4 +1,4 @@
-package com.vms.android.vancouvermetalshows;
+package com.vms.android.vancouvermetalshows.fragments;
 
 import android.os.Bundle;
 import androidx.annotation.Nullable;
@@ -9,6 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.vms.android.vancouvermetalshows.R;
+import com.vms.android.vancouvermetalshows.adapters.ShowsRecyclerViewAdapter;
+import com.vms.android.vancouvermetalshows.classes.Shows;
 
 
 public class ShowDetailsFragment extends Fragment {
@@ -48,7 +51,7 @@ public class ShowDetailsFragment extends Fragment {
         mDateTextView.setText(show.getDate());
 
 
-        ShowsFragment showsFragment = new ShowsFragment();
+        ShowsRecyclerViewAdapter.ShowsFragment showsFragment = new ShowsRecyclerViewAdapter.ShowsFragment();
         mVenueTextView = showDetailsView.findViewById(R.id.venue);
         mVenueTextView.setText(showsFragment.convertDate(show.getVenue()));
 

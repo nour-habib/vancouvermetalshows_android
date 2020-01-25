@@ -1,16 +1,20 @@
-package com.vms.android.vancouvermetalshows;
+package com.vms.android.vancouvermetalshows.activities;
 
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.util.Log;
 
-import androidx.appcompat.app.ActionBar;
+import com.vms.android.vancouvermetalshows.fragments.ButtonOptionsFragment;
+import com.vms.android.vancouvermetalshows.fragments.HeaderFragment;
+import com.vms.android.vancouvermetalshows.fragments.MapFragment;
+import com.vms.android.vancouvermetalshows.R;
+import com.vms.android.vancouvermetalshows.fragments.ShowDetailsFragment;
+import com.vms.android.vancouvermetalshows.classes.Shows;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 public class ShowsDetailActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.vms.android.vancouvermetalshows;
+package com.vms.android.vancouvermetalshows.classes;
 
 import android.os.Parcel;
 import android.os.Parcelable;

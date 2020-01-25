@@ -1,33 +1,28 @@
-package com.vms.android.vancouvermetalshows;
+package com.vms.android.vancouvermetalshows.fragments;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.graphics.Color;
-import android.graphics.Point;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
 
+import com.vms.android.vancouvermetalshows.R;
+import com.vms.android.vancouvermetalshows.adapters.ShowsRecyclerViewAdapter;
+import com.vms.android.vancouvermetalshows.classes.Shows;
+
 import net.alhazmy13.wordcloud.WordCloud;
 import net.alhazmy13.wordcloud.WordCloudView;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Random;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 //import net.alhazmy13.wordcloud.WordCloud;
 //import net.alhazmy13.wordcloud.ColorTemplate;
 
@@ -48,7 +43,7 @@ public class HomeFragment extends Fragment {
 
         Context context = getContext();
 
-        ShowsFragment showsFragment = new ShowsFragment();
+        ShowsRecyclerViewAdapter.ShowsFragment showsFragment = new ShowsRecyclerViewAdapter.ShowsFragment();
         mArrayList = showsFragment.getShows(context);
         //Log.d("mArrayListSize: ", Integer.toString(mArrayList.size()));
 
