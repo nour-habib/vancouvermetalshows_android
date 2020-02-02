@@ -5,4 +5,4 @@ Android app includes: RecyclerView, SearchView, jSON, Firebase, ListView, Google
 
 To do: Fix GoogleMaps, stylize WordCloud
 
-![](Screenshot_1580606599.png)
+
