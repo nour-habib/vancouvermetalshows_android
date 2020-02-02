@@ -7,13 +7,7 @@ To do: Fix GoogleMaps, stylize WordCloud
 
 
 ![](splash.png)
-
 ![](wordcloud.png)
-
 ![](shows.png)
-
-
 ![](detail.png)
-
-
 ![](favs.png)
